@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(53, 31, 91, 0.1);
+}
+
+body {
+  font-family: 'Lexend', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
