@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #351f5b;
+  --color-secondary: rgb(53 31 91);
+  --color-background-light: #f7f6f8;
+  --color-background-dark: #18141e;
+
+  --font-display: "Lexend", sans-serif;
+
+  --radius-DEFAULT: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(53, 31, 91, 0.1);
+}
+
+body {
+  font-family: 'Lexend', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}

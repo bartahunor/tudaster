@@ -67,8 +67,8 @@ export default function Navbar() {
             <a className="text-slate-700 hover:text-primary font-medium transition-colors cursor-pointer" onClick={handlePracticeClick}>
                 Gyakorlás
             </a>
-            <button className="bg-primary text-white px-6 py-2.5 rounded-lg font-bold hover:bg-primary/90 transition-all shadow-md" onClick={handleAuthClick}>
-                {loading ? 'Belépés' : user ? user.username : 'Belépés'}
+            <button className="bg-slate-900 text-white px-6 py-2.5 rounded-lg font-bold hover:bg-primary/90 transition-all shadow-md" >
+                Belépés
             </button>
         </div>
 
