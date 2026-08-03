@@ -86,13 +86,7 @@ function TestimonialSection() {
                         </div>
                     </div>
 
-                    <div
-                        className="testimonial-scroll flex flex-col gap-6 max-h-[600px] overflow-y-auto pr-4"
-                        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-                    >
-                        <style>{`
-                            .testimonial-scroll::-webkit-scrollbar { display: none; }
-                        `}</style>
+                    <div className="testimonial-scroll flex flex-col gap-6">
                         {texts.map((text, index) => (
                             <TestimonialCard
                                 key={index}
