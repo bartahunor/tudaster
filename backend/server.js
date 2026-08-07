@@ -13,24 +13,34 @@ app.use(express.json())
 app.use(express.static("public"))
 
 /* =========================
-   TANTÁRGYAK - lekérés és létrehozás
+   FŐ OLDALI API LEKÉRÉSEK
 ========================= */
 
-app.get('/api/tantargyak', async (req, res) => {
-  const rows = await sql`select * from tantargyak order by nev`
+app.get('/api/temakorok/szuro_tantargyossz', async (req, res) => {
+  const rows = await sql`
+    select 
+      tantargyak.nev as tantargy,
+      count(*) as darab
+    from temakorok
+    join tantargyak on tantargyak.id = temakorok.tantargy_id
+    group by tantargyak.id, tantargyak.nev
+    order by tantargyak.nev
+  `
   res.json(rows)
 })
 
-app.post('/api/tantargyak', async (req, res) => {
-  const { nev } = req.body
-
-  const result = await sql`
-    insert into tantargyak (nev)
-    values (${nev})
-    returning *
+app.get('/api/feladatok/szuro_tanfel', async (req, res) => {
+  const rows = await sql`
+    select 
+      tantargyak.nev as tantargy,
+      count(*) as darab
+    from feladatok
+    join temakorok on temakorok.id = feladatok.temakor_id
+    join tantargyak on tantargyak.id = temakorok.tantargy_id
+    group by tantargyak.id, tantargyak.nev
+    order by tantargyak.nev
   `
-
-  res.json(result[0])
+  res.json(rows)
 })
 
 
