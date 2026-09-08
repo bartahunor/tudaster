@@ -53,3 +53,7 @@ html {
 .font-mono {
   font-family: 'JetBrains Mono', monospace;
 }
+
+.auth-gradient {
+  background: linear-gradient(135deg, #351F5B 0%, #24123D 100%);
+}
