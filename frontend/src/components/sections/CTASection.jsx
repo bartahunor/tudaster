@@ -14,7 +14,7 @@ function CTASection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
             <Link
               id="regisztracio"
-              to="/login"
+              to="/register"
               className="bg-white text-primary px-10 py-4 rounded-xl font-bold text-xl hover:scale-105 transition-transform inline-block text-center"
             >
               Regisztráció
